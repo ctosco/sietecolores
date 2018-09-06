@@ -7,6 +7,7 @@ var compass = require('gulp-compass');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 var browserSync = require('browser-sync').create();
+var ghPages = require('gulp-gh-pages');
 
 
 gulp.task('nunjucks', function() {
@@ -19,6 +20,14 @@ gulp.task('nunjucks', function() {
   // output files in .www folder
   .pipe(gulp.dest('.www'))
 });
+
+// gulp.task('default', function () {
+//   return gulp.src('src/templates/*.html')
+//     .pipe(nunjucksRender({
+//       path: ['src/templates/'] // String or Array
+//     }))
+//     .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('compass', function() {
   gulp.src('./sass/*.scss')
@@ -79,6 +88,11 @@ gulp.task('serve', ['compass'], function() {
 
     gulp.watch("sass/*.scss", ['compass']);
     gulp.watch(".www/*.html").on('change', browserSync.reload);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./.www/**/*')
+    .pipe(ghPages(remoteUrl:"https://github.com/ctosco/sietecolores.git"), origin: "github");
 });
 
 gulp.task('build', ['nunjucks', 'compass', 'css-minify', 'compress', 'image-min']);
