@@ -92,7 +92,7 @@ gulp.task('serve', ['compass'], function() {
 
 gulp.task('deploy', function() {
   return gulp.src('./.www/**/*')
-    .pipe(ghPages(remoteUrl:"https://github.com/ctosco/sietecolores.git"), origin: "github");
+    .pipe(ghPages({remoteUrl: "https://github.com/ctosco/sietecolores.git", origin: "github"}));
 });
 
 gulp.task('build', ['nunjucks', 'compass', 'css-minify', 'compress', 'image-min']);

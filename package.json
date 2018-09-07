@@ -11,7 +11,8 @@
     "gulp-minify-css": "^1.2.3",
     "gulp-nunjucks-render": "^1.1.0",
     "hover.css": "^2.3.2",
-    "imagemin-pngquant": "^4.2.0"
+    "imagemin-pngquant": "^4.2.0",
+    "vegas": "^2.4.0"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
