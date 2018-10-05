@@ -1,0 +1,118 @@
+.icon-services {
+	color: #9b8172;
+}
+
+.text-portada{
+	font-family: 'Quicksand', sans-serif;
+	color:white;
+	font-weight: 800;
+}
+
+.logo-portada{
+	height: 180;
+	width: 240;
+}
+
+.homepage-info {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    right: 1em;
+    bottom: 1em;
+}
+
+
+.homepage-info h1 .line1{
+	font-size:2em;
+	letter-spacing:-2px;
+	margin-bottom:.2em;
+}
+
+.homepage-info h1 .line2{
+	position: absolute;
+	left: 2.2em;
+	bottom: 0.30em;
+	text-shadow:-1px -1px 1px rgba(0,0,0,0.6),1px 1px 1px rgba(0,0,0,0.6),0px 0px 10px #000;
+	opacity:0.6;
+	font-size:4em
+}
+
+.homepage-info h1 .line3{
+	font-size:2em;
+	opacity:0.6
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+	.text-responsive {
+	  	font-size: 3.0rem;
+	  	margin-top: 2em
+	}
+}
+
+@media (max-width: 1024px) {
+	.homepage-info h1 .line1 {
+		font-size: 1.5em
+	}
+	.homepage-info h1 .line2 {
+		font-size: 3.5em
+	}
+	.homepage-info h1 .line3 {
+		font-size: 1.5em
+	}
+}
+
+.homepage-submenu{
+	line-height:1.8;
+	text-align:left;
+	font-size:1.0em;
+	top:-4px;
+	right:0
+}
+
+.homepage-submenu li{
+	-webkit-transition:.5s cubic-bezier(0, 0.5, 0, 1);
+	transition:.5s cubic-bezier(0, 0.5, 0, 1);
+	-webkit-transform:translateY(16px);
+	transform:translateY(16px);
+	opacity:0
+}
+
+.homepage-submenu li:nth-child(1){
+	-webkit-transition-delay:100ms;
+	transition-delay:100ms
+}
+
+.homepage-submenu li:nth-child(2){
+	-webkit-transition-delay:200ms;
+	transition-delay:200ms
+}
+
+.homepage-submenu li:nth-child(3){
+	-webkit-transition-delay:300ms;
+	transition-delay:300ms
+}
+
+.homepage-submenu li:nth-child(4){
+	-webkit-transition-delay:400ms;
+	transition-delay:400ms
+}
+
+.homepage-submenu li:nth-child(5){
+	-webkit-transition-delay:500ms;
+	transition-delay:500ms
+}
+
+.homepage-submenu li{
+	opacity:1;
+	margin-top:4px;
+	-webkit-transform:translateY(0);
+	transform:translateY(0)
+}
+
+.banner {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1em;
+    font-weight: 0;
+}
