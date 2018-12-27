@@ -70,48 +70,46 @@
   <!-- Page Content -->
   <div class="container-fluid">
     
+<!-- Contact Form -->
+<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
 <div class="row mt-3 pt-5">
-	<div class="col-md-8 offset-md-2 mt-3">
-		<h3>Envianos tu Mensaje o consulta...</h3>
-		<form name="sentMessage" id="contactForm" novalidate>
-		  <div class="form-group row">
-		    <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre:</label>
-		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="name" placeholder="Nombre / Compañia" required data-validation-required-message="Por favor ingrese su nombre o compañia">
-		      <p class="help-block text-danger"></p>
-		    </div>
-		  </div>
-		  <div class="form-group row">
-		    <label for="inputPhone" class="col-sm-2 col-form-label">Telefono:</label>
-		    <div class="col-sm-10">
-		      <input type="tel" class="form-control" id="phone" placeholder="Ej: 0358-4646468" required data-validation-required-message="Por favor ingrese su número de telefono">
-		      <p class="help-block text-danger"></p>
-		    </div>
-		  </div>
-		  <div class="form-group row">
-		    <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
-		    <div class="col-sm-10">
-		      <input type="email" class="form-control" id="email" placeholder="Email" required data-validation-required-message="Por favor ingrese su enail">
-		      <p class="help-block text-danger"></p>
-		    </div>
-		  </div>
-		  <div class="form-group row">
-		    <label for="inputEmail" class="col-sm-2 col-form-label">Mensaje:</label>
-		    <div class="col-sm-10">
-			<textarea rows="10" cols="100" class="form-control" id="message" required="" data-validation-required-message="Por favor ingrese su mensaje" maxlength="999" style="resize:none">
-			</textarea>
-			<p class="help-block text-danger"></p>
-		  </div>
-		  <div class="form-group row">
-		    <div class="col-sm-10">
-		      <button type="submit" class="btn btn-primary">Enviar</button>
-		    </div>
-		  </div>
-		</form>
-
-	</div>	
+<div class="col-md-8 offset-md-2 mt-3">
+  <h3>Envianos tu Mensaje o consulta...</h3>
+  <form name="sentMessage" id="contactForm" novalidate>
+    <div class="control-group form-group">
+      <div class="controls">
+        <label>Nombre Completo:</label>
+        <input type="text" class="form-control" id="name" required data-validation-required-message="Por favor ingrese su nombre completo.">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group form-group">
+      <div class="controls">
+        <label>N&uacute;mero de Tel&eacute;fono:</label>
+        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Por favor ingrese su n&uacute;mero de Tel&eacute;fono.">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group form-group">
+      <div class="controls">
+        <label>Direcci&oacute;n de Email:</label>
+        <input type="email" class="form-control" id="email" required data-validation-required-message="Por favor ingrese su direcci&oacute;n de email.">
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group form-group">
+      <div class="controls">
+        <label>Mensaje:</label>
+        <textarea rows="7" cols="100" class="form-control" id="message" required data-validation-required-message="Por favor ingrese su mensaje." maxlength="999" style="resize:none"></textarea>
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div id="success"></div>
+    <!-- For success/fail messages -->
+    <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar Mensaje</button>
+  </form>
 </div>
-
+ 
   </div>
 
   <div class="clear"></div>
@@ -160,8 +158,9 @@
 	
       <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-2.0.3.min.js" integrity="sha256-sTy1mJ4I/LAjFCCdEB4RAvPSmRCb3CU7YqodohyeOLo=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
+ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
